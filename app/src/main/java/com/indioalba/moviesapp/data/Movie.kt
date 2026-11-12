@@ -1,4 +1,4 @@
-package com.indioalba.moviesapp
+package com.indioalba.moviesapp.data
 
 data class Movie(
     val id: Int,
