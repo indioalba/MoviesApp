@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.secrets.gradle.plugin)
 }
 
 android {
@@ -32,6 +33,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -47,7 +49,8 @@ dependencies {
     implementation(libs.io.coil.kt.coil.compose)
     implementation(libs.io.coil.kt.coil.network.okhttp)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
+    implementation(libs.retrofit2)
+    implementation(libs.gson)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
