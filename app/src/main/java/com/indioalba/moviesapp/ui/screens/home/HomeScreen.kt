@@ -65,10 +65,8 @@ fun HomeScreen(
                 modifier = Modifier.padding(innerPadding),
                 columns = GridCells.Adaptive(120.dp)
             ) {
-                items(movies.size) { index ->
-                    MovieItem(
-                        movie = movies[index]
-                    )
+                items(movies.size ) { index ->
+                    MovieItem( movie = movies[index] )
                 }
             }
         }

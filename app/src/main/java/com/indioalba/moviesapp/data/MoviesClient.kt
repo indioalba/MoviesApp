@@ -45,5 +45,7 @@ private fun apiKeyAsQuery(chain: Interceptor.Chain) = chain.proceed(
                 .addQueryParameter("api_key", BuildConfig.TMDB_API_KEY)
                 .build()
         )
+        .header("OS", "Android")
+        .header("version", BuildConfig.VERSION_NAME)
         .build()
 )

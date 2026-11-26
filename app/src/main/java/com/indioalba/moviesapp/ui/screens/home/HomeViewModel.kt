@@ -14,7 +14,7 @@ class HomeViewModel : ViewModel() {
     data class UiState(
         val isLoading: Boolean = false,
         val errorMessage: String? = null,
-        val movies: List<Movie> = emptyList()
+        val movies: List<Movie> = emptyList(),
     )
 
     var state by mutableStateOf(UiState())
