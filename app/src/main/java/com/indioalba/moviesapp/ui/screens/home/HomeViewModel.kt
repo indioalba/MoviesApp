@@ -11,6 +11,12 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
 
+    data class UiState(
+        val isLoading: Boolean = false,
+        val errorMessage: String? = null,
+        val movies: List<Movie> = emptyList()
+    )
+
     var state by mutableStateOf(UiState())
         private set
 
@@ -22,10 +28,4 @@ class HomeViewModel : ViewModel() {
             state = UiState(movies = moviesRepository.fetchPopularMovies())
         }
     }
-
-    data class UiState(
-        val isLoading: Boolean = false,
-        val errorMessage: String? = null,
-        val movies: List<Movie> = emptyList()
-    )
 }
